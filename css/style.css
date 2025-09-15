@@ -1,0 +1,259 @@
+/* css/style.css */
+
+/* --- Global Styles & Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Login Page Styles --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #ddd;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.login-footer {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #a7d7a9;
+    transition: text-decoration 0.3s;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #ff8a8a;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: none; /* Hidden by default */
+}
+
+
+/* --- Main Website Styles (index.html) --- */
+
+/* Header */
+.top-bar {
+    background-color: #f8f8f8;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
+.contact-info i, .social-media i {
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.social-media a {
+    margin-left: 15px;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s;
+}
+.social-media a:hover {
+    color: #4CAF50;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #4CAF50;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.main-nav ul li a {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 5px;
+}
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 50, 10, 0.6), rgba(0, 50, 10, 0.6)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #FFC107;
+    color: #333;
+}
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: #FFC107;
+    color: #FFC107;
+}
+
+.btn-secondary {
+    background-color: rgba(108, 117, 125, 0.8);
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #333;
+}
